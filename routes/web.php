@@ -12,3 +12,4 @@
 */
 
 Route::get('/', 'Controller@home');
+Route::get('/gif-create', 'Controller@gif');

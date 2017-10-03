@@ -7,6 +7,8 @@ use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Image;
+use GifCreator;
+
 class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
@@ -14,11 +16,11 @@ class Controller extends BaseController
     public function home(){
         
         $fontColor = '#4286f4';
-        $dimensions = '1080';
+        $dimensions = '200';
         $quote = 'Style is the image of character';
         $quoteLength = count(explode(" ",$quote));
-        $quoteFontSize = '120';
-        $authorFontSize = '120';
+        $quoteFontSize = '50';
+        $authorFontSize = '50';
         $spacer = $quoteFontSize;
         $seporatorYPadding = ($dimensions/100) * 30;
 
@@ -87,5 +89,33 @@ class Controller extends BaseController
         $img->save('bar.jpg', 100);
 
         return view('welcome');
+    }
+
+    public function gif(){
+        // $img = Image::make('foo.jpg');
+
+        // $img->resize(200,200);
+        // $img->save('gif/bar1.png', 100);
+        // $img->greyscale();
+        // $img->save('gif/bar2.png', 100);
+
+        $frames = array(
+            
+            "gif/bar1.png", // Image file path
+            "gif/bar2.png", // Image file path
+           
+        );
+        
+        // Create an array containing the duration (in millisecond) of each frames (in order too)
+        $durations = array(80, 80, 80, 80);
+        
+        // Initialize and create the GIF !
+        $gc = new \App\GifCreator();
+        $gc->create($frames, $durations, 0);
+        $gifBinary = $gc->getGif();
+
+        file_put_contents('gif/Gif.gif', $gifBinary);
+
+        return view('gif');
     }
 }

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "f68ff513255bcdfca7426fbd692188cc",
+    "content-hash": "a1d13ece92422ce9590f50156e04b777",
     "packages": [
         {
             "name": "calcinai/php-imagick",
@@ -1125,6 +1125,118 @@
                 "random"
             ],
             "time": "2017-09-27T21:40:39+00:00"
+        },
+        {
+            "name": "phpclasses/movemegif",
+            "version": "1.0.2",
+            "dist": {
+                "type": "zip",
+                "url": "https://www.phpclasses.org/install/package/movemegif.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "example/pong/Pong.php",
+                    "php/movemegif/GifBuilder.php",
+                    "example/pong/actor/Actor.php",
+                    "example/pong/actor/Background.php",
+                    "example/pong/actor/Ball.php",
+                    "example/pong/actor/Pad.php",
+                    "example/pong/actor/PadLeft.php",
+                    "example/pong/actor/PadRight.php",
+                    "example/pong/actor/Text.php",
+                    "example/pong/lib/Font.php",
+                    "php/movemegif/data/ApplicationExtension.php",
+                    "php/movemegif/data/Clipper.php",
+                    "php/movemegif/data/ColorTable.php",
+                    "php/movemegif/data/CommentExtension.php",
+                    "php/movemegif/data/CompressedCodeString.php",
+                    "php/movemegif/data/DataSubBlock.php",
+                    "php/movemegif/data/Extension.php",
+                    "php/movemegif/data/Formatter.php",
+                    "php/movemegif/data/GraphicExtension.php",
+                    "php/movemegif/data/HeaderBlock.php",
+                    "php/movemegif/data/ImageData.php",
+                    "php/movemegif/data/ImageDescriptor.php",
+                    "php/movemegif/data/LogicalScreenDescriptor.php",
+                    "php/movemegif/data/Math.php",
+                    "php/movemegif/data/NetscapeApplicationBlock.php",
+                    "php/movemegif/data/Trailer.php",
+                    "php/movemegif/domain/Canvas.php",
+                    "php/movemegif/domain/ClippingArea.php",
+                    "php/movemegif/domain/FileImageCanvas.php",
+                    "php/movemegif/domain/Frame.php",
+                    "php/movemegif/domain/GdCanvas.php",
+                    "php/movemegif/domain/StringCanvas.php",
+                    "php/movemegif/exception/ColorNotFoundException.php",
+                    "php/movemegif/exception/DurationTooSmallException.php",
+                    "php/movemegif/exception/EmptyFrameException.php",
+                    "php/movemegif/exception/InvalidDimensionsException.php",
+                    "php/movemegif/exception/MovemegifException.php",
+                    "php/movemegif/exception/TooManyColorsException.php",
+                    "php/movemegif/data/GDAcceleratedPixelDataProducer.php",
+                    "php/movemegif/data/GifData.php",
+                    "php/movemegif/data/GifParser.php",
+                    "php/movemegif/data/PHPPixelDataProducer.php",
+                    "php/movemegif/data/PixelDataProducer.php",
+                    "php/movemegif/exception/GifParseException.php"
+                ]
+            }
+        },
+        {
+            "name": "pomirleanu/gif-create",
+            "version": "v1.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/pomirleanu/gif-create.git",
+                "reference": "84a840fb53285b8531d2d6e020434f6c501bf5bc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/pomirleanu/gif-create/zipball/84a840fb53285b8531d2d6e020434f6c501bf5bc",
+                "reference": "84a840fb53285b8531d2d6e020434f6c501bf5bc",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "~5.1",
+                "php": "~5.6|~7.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.0||~5.0",
+                "squizlabs/php_codesniffer": "^2.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Pomirleanu\\GifCreate\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Pomirleanu Florentin Cristinel",
+                    "email": "pomirleanu.florentin@gmail.com",
+                    "homepage": "http://printreblocuri.ro",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Easy way to create gif animations from png images.",
+            "homepage": "https://github.com/pomirleanu/gif-create",
+            "keywords": [
+                "GifCreate",
+                "pomirleanu"
+            ],
+            "time": "2016-10-21T18:37:41+00:00"
         },
         {
             "name": "psr/container",
